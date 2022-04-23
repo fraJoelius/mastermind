@@ -97,55 +97,6 @@ function ZuordnungTastatur () {
         basic.clearScreen()
     }
 }
-/**
- * THE GAME OF MOO!
- * 
- * Connect a 4x4 matrix keypad like this:
- * 
- * Rows:
- * 
- * keypad / micro:bit pin
- * 
- * 1.          0
- * 
- * 2.          1
- * 
- * 3.          2
- * 
- * 4           8
- * 
- * Columns
- * 
- * 5.         13
- * 
- * 6.         14
- * 
- * 7.         15
- * 
- * 8.         16
- * 
- * How to play:
- * 
- * The micro:bit thinks of a 4 digit number which you have to guess. There are no zeroes and each digit in the number is unique. 
- * 
- * Enter a 4 digit number and press D to evaluate your guess.
- * 
- * It shows the number of bulls and cows.
- * 
- * Bulls are right numbers in the right place.
- * 
- * Cows are right numbers in the wrong place.
- * 
- * You can press A+B to cheat and see the answer.
- * 
- * Improve it:
- * 
- * - Limit the number of turns
- * 
- * - Check if the digits in guesses are unique
- * 
- * - 2-player version using radio
- */
 let Hunde = 0
 let Katze = 0
 let beliebig = 0
