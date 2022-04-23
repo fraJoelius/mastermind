@@ -2,9 +2,9 @@ function überprüfedieVermutung () {
     if (VermutedieReihe.length == 4) {
         wenden += 1
         if (VermutedieReihe == VermutedieZahl) {
-            basic.showString("you win in")
+            basic.showString("du hast es geschafft")
             basic.showNumber(wenden)
-            basic.showString("turns")
+            basic.showString("wende")
             basic.pause(5000)
             Neustart()
         } else {
@@ -14,10 +14,6 @@ function überprüfedieVermutung () {
         basic.showString("alles falsch")
     }
     VermutedieReihe = ""
-}
-function buildString (key: string) {
-    basic.showString(key)
-    VermutedieReihe = "" + VermutedieReihe + key
 }
 function Neustart () {
     wenden = 0
@@ -45,9 +41,13 @@ function zähleKatzeundHunde () {
         }
     }
     basic.showNumber(Katze)
-    basic.showString("bulls")
+    basic.showString("Katze")
     basic.showNumber(Hunde)
-    basic.showString("cows")
+    basic.showString("Hunde")
+}
+function bildeeineReihe (key: string) {
+    basic.showString(key)
+    VermutedieReihe = "" + VermutedieReihe + key
 }
 function ZuordnungTastatur () {
     pins.digitalWritePin(DigitalPin.P9, 0)
@@ -55,7 +55,7 @@ function ZuordnungTastatur () {
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         basic.showString(".")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
-        buildString("0")
+        bildeeineReihe("0")
     } else if (pins.digitalReadPin(DigitalPin.P15) == 1) {
         basic.showString("#")
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
@@ -64,33 +64,33 @@ function ZuordnungTastatur () {
     pins.digitalWritePin(DigitalPin.P12, 0)
     pins.digitalWritePin(DigitalPin.P11, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
-        buildString("7")
+        bildeeineReihe("7")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
-        buildString("8")
+        bildeeineReihe("8")
     } else if (pins.digitalReadPin(DigitalPin.P15) == 1) {
-        buildString("9")
+        bildeeineReihe("9")
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showString("C")
     }
     pins.digitalWritePin(DigitalPin.P11, 0)
     pins.digitalWritePin(DigitalPin.P10, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
-        buildString("4")
+        bildeeineReihe("4")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
-        buildString("5")
+        bildeeineReihe("5")
     } else if (pins.digitalReadPin(DigitalPin.P15) == 1) {
-        buildString("6")
+        bildeeineReihe("6")
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showString("B")
     }
     pins.digitalWritePin(DigitalPin.P10, 0)
     pins.digitalWritePin(DigitalPin.P9, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
-        buildString("1")
+        bildeeineReihe("1")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
-        buildString("2")
+        bildeeineReihe("2")
     } else if (pins.digitalReadPin(DigitalPin.P15) == 1) {
-        buildString("3")
+        bildeeineReihe("3")
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showString("A")
     } else {
