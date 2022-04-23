@@ -50,8 +50,8 @@ function bildeeineReihe (key: string) {
     VermutedieReihe = "" + VermutedieReihe + key
 }
 function ZuordnungTastatur () {
-    pins.digitalWritePin(DigitalPin.P9, 0)
-    pins.digitalWritePin(DigitalPin.P12, 1)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P8, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         basic.showString(".")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
@@ -61,8 +61,8 @@ function ZuordnungTastatur () {
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         überprüfedieVermutung()
     }
-    pins.digitalWritePin(DigitalPin.P12, 0)
-    pins.digitalWritePin(DigitalPin.P11, 1)
+    pins.digitalWritePin(DigitalPin.P8, 0)
+    pins.digitalWritePin(DigitalPin.P2, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         bildeeineReihe("7")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
@@ -72,8 +72,8 @@ function ZuordnungTastatur () {
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showString("C")
     }
-    pins.digitalWritePin(DigitalPin.P11, 0)
-    pins.digitalWritePin(DigitalPin.P10, 1)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P1, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         bildeeineReihe("4")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
@@ -83,8 +83,8 @@ function ZuordnungTastatur () {
     } else if (pins.digitalReadPin(DigitalPin.P16) == 1) {
         basic.showString("B")
     }
-    pins.digitalWritePin(DigitalPin.P10, 0)
-    pins.digitalWritePin(DigitalPin.P9, 1)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P0, 1)
     if (pins.digitalReadPin(DigitalPin.P13) == 1) {
         bildeeineReihe("1")
     } else if (pins.digitalReadPin(DigitalPin.P14) == 1) {
